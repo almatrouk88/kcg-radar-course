@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8"><meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>جهاز الرادار — دورة الأجهزة الملاحية</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -923,15 +922,17 @@
     <div style="display:grid;gap:.7rem">
       <div class="panel frag">
         <div class="ptitle">المبدأ <small>مصدر متحرك يضغط الموجات أمامه</small></div>
-        <svg viewBox="0 0 640 200" role="img" aria-label="تأثير دوبلر">
-          <g fill="none" stroke="#38bdf8" stroke-width="2">
-            <circle cx="330" cy="100" r="22"/><circle cx="345" cy="100" r="44"/><circle cx="360" cy="100" r="66"/><circle cx="375" cy="100" r="88"/><circle cx="390" cy="100" r="110" opacity=".6"/><circle cx="405" cy="100" r="132" opacity=".35"/>
+        <svg viewBox="0 0 640 200" role="img" aria-label="تأثير دوبلر" id="dopSvg">
+          <rect width="640" height="200" fill="#06131f" rx="10"/>
+          <g id="dopScene">
+            <g id="dopWaves"><circle cx="330" cy="100" r="0" fill="none" stroke="#38bdf8" stroke-width="2"><animate attributeName="r" from="0" to="150" dur="4.8s" begin="0.0s" repeatCount="indefinite"/><animate attributeName="cx" from="330" to="430" dur="4.8s" begin="0.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;.7;1" dur="4.8s" begin="0.0s" repeatCount="indefinite"/></circle><circle cx="330" cy="100" r="0" fill="none" stroke="#38bdf8" stroke-width="2"><animate attributeName="r" from="0" to="150" dur="4.8s" begin="-0.7999999999999999s" repeatCount="indefinite"/><animate attributeName="cx" from="330" to="430" dur="4.8s" begin="-0.7999999999999999s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;.7;1" dur="4.8s" begin="-0.7999999999999999s" repeatCount="indefinite"/></circle><circle cx="330" cy="100" r="0" fill="none" stroke="#38bdf8" stroke-width="2"><animate attributeName="r" from="0" to="150" dur="4.8s" begin="-1.5999999999999999s" repeatCount="indefinite"/><animate attributeName="cx" from="330" to="430" dur="4.8s" begin="-1.5999999999999999s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;.7;1" dur="4.8s" begin="-1.5999999999999999s" repeatCount="indefinite"/></circle><circle cx="330" cy="100" r="0" fill="none" stroke="#38bdf8" stroke-width="2"><animate attributeName="r" from="0" to="150" dur="4.8s" begin="-2.4s" repeatCount="indefinite"/><animate attributeName="cx" from="330" to="430" dur="4.8s" begin="-2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;.7;1" dur="4.8s" begin="-2.4s" repeatCount="indefinite"/></circle><circle cx="330" cy="100" r="0" fill="none" stroke="#38bdf8" stroke-width="2"><animate attributeName="r" from="0" to="150" dur="4.8s" begin="-3.1999999999999997s" repeatCount="indefinite"/><animate attributeName="cx" from="330" to="430" dur="4.8s" begin="-3.1999999999999997s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;.7;1" dur="4.8s" begin="-3.1999999999999997s" repeatCount="indefinite"/></circle><circle cx="330" cy="100" r="0" fill="none" stroke="#38bdf8" stroke-width="2"><animate attributeName="r" from="0" to="150" dur="4.8s" begin="-4.0s" repeatCount="indefinite"/><animate attributeName="cx" from="330" to="430" dur="4.8s" begin="-4.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;.7;1" dur="4.8s" begin="-4.0s" repeatCount="indefinite"/></circle></g>
+            <g id="dopSrc"><rect x="300" y="86" width="60" height="28" rx="6" fill="#f5a524"/><circle cx="312" cy="118" r="6" fill="#dbe7f1"/><circle cx="348" cy="118" r="6" fill="#dbe7f1"/><path d="M296 100 h-30" stroke="#ffcf6e" stroke-width="3" marker-end="url(#ar)"/></g>
           </g>
-          <rect x="300" y="86" width="60" height="28" rx="6" fill="#f5a524"/><circle cx="312" cy="118" r="6" fill="#dbe7f1"/><circle cx="348" cy="118" r="6" fill="#dbe7f1"/>
-          <path d="M296 100 h-30" stroke="#ffcf6e" stroke-width="3" marker-end="url(#ar)"/><text x="278" y="88" text-anchor="middle" font-size="11" fill="#ffcf6e">اتجاه الحركة</text>
-          <g font-size="12"><text x="90" y="40" text-anchor="middle" fill="#f87171">أمام المصدر: موجات متقاربة</text><text x="90" y="56" text-anchor="middle" fill="#f87171">تردد أعلى ← «يقترب»</text><text x="560" y="40" text-anchor="middle" fill="#4ade80">خلف المصدر: موجات متباعدة</text><text x="560" y="56" text-anchor="middle" fill="#4ade80">تردد أقل ← «يبتعد»</text></g>
-          <text x="320" y="190" text-anchor="middle" font-size="12" fill="#9aa9bd">الرادار يقارن تردد الصدى بتردد ما أرسله</text>
+          <g transform="translate(34 100)"><rect x="-14" y="-10" width="28" height="20" rx="3" fill="#22354d" stroke="#4ade80"/><line x1="0" y1="-10" x2="0" y2="-30" stroke="#dbe7f1" stroke-width="2"/><rect x="-10" y="-34" width="20" height="5" rx="2" fill="#ffcf6e"/><text y="30" text-anchor="middle" font-size="11" fill="#4ade80">الرادار</text></g>
+          <text x="320" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#f87171" id="dopMsg">الهدف يقترب من الرادار — الموجات أمامه متقاربة ← الرادار يستقبل ترددًا أعلى</text>
+          <text x="320" y="190" text-anchor="middle" font-size="12" fill="#9aa9bd">الرادار يقارن تردد الصدى بتردد ما أرسله — أعلى = يقترب · أقل = يبتعد</text>
         </svg>
+        <div class="ctrls" style="justify-content:center"><button class="btn" id="dopBtn">🔄 اجعله يبتعد</button></div>
       </div>
       <p class="lead frag" style="max-width:60ch">تأثير دوبلر هو <strong>التغير في التردد</strong> (أو الطول الموجي) لموجة بالنسبة لمراقب متحرك بالنسبة لمصدر الموجة.</p>
     </div>
@@ -1082,7 +1083,7 @@
 
 <!-- ═══ 25b الأعطال ١ ═══ -->
 <section class="slide" data-title="الأعطال الشائعة — ١: أعطال الصورة" data-ch="7" data-notes="اسأل القاعة عن كل عطل قبل إظهار البطاقة. لاحظ أن أول سببين لعطل «لا أهداف» إعدادات شاشة شرحناها للتو — مو عطل جهاز.">
-  <header><span class="k">١٥ <small>· ١ من ٢</small></span><h2>الأعطال الشائعة — أعطال الصورة</h2><span class="src">إضافة — الصيانة</span></header>
+  <header><span class="k">١٥ <small>· ١ من ٣</small></span><h2>الأعطال الشائعة — أعطال الصورة</h2><span class="src">إضافة — الصيانة</span></header>
   <div class="body">
     <div class="cards">
       <div class="card frag"><div class="ph" style="aspect-ratio:16/9"><svg viewBox="0 0 320 180" role="img"><rect width="320" height="180" fill="#06131f"/><g transform="translate(160 92)" opacity="1"><circle r="70" fill="#04101a" stroke="#4ade80" stroke-opacity=".5"/><circle r="46" fill="none" stroke="#4ade80" stroke-opacity=".25" stroke-dasharray="3 4"/><circle r="23" fill="none" stroke="#4ade80" stroke-opacity=".25" stroke-dasharray="3 4"/><line x1="0" y1="0" x2="0" y2="-70" stroke="#4ade80" stroke-width="1.5"/><g class="sweep"><path d="M0 0 L0 -70 A70 70 0 0 1 24 -66 Z" fill="#4ade80" opacity=".2"/></g><circle r="3" fill="#fff"/></g><rect x="232" y="12" width="76" height="24" rx="6" fill="#f5a524"/><text x="270" y="29" text-anchor="middle" font-size="13" font-weight="700" fill="#0b1220" direction="ltr">STBY ?</text><text x="160" y="176" text-anchor="middle" font-size="11" fill="#9aa9bd">شاشة شغّالة… بلا أي هدف</text></svg></div><h3 style="font-size:clamp(1rem,1.8vw,1.3rem)">١ · الشاشة تعمل ولا توجد أهداف</h3><p><b style="color:var(--red)">السبب المحتمل:</b> الوضع Standby، أو Gain منخفض، أو الماغنترون ضعيف.</p><p><b style="color:var(--green)">أول شيء تفحصه:</b> وضع Transmit ← Gain ← مؤشر Tune.</p></div>
@@ -1095,7 +1096,7 @@
 
 <!-- ═══ 25c الأعطال ٢ ═══ -->
 <section class="slide" data-title="الأعطال الشائعة — ٢: أعطال التشغيل" data-ch="7" data-notes="القاعدة: الإعدادات ثم الطاقة ثم الكيبلات، والفك آخر شيء.">
-  <header><span class="k">١٥ <small>· ٢ من ٢</small></span><h2>الأعطال الشائعة — أعطال التشغيل</h2><span class="src">إضافة — الصيانة</span></header>
+  <header><span class="k">١٥ <small>· ٢ من ٣</small></span><h2>الأعطال الشائعة — أعطال التشغيل</h2><span class="src">إضافة — الصيانة</span></header>
   <div class="body">
     <div class="cards">
       <div class="card frag"><div class="ph" style="aspect-ratio:16/9"><svg viewBox="0 0 320 180" role="img"><rect width="320" height="180" fill="#06131f"/><rect x="156" y="95" width="8" height="60" fill="#6b86a3"/><rect x="90" y="80" width="140" height="16" rx="8" fill="#dbe7f1"/><path d="M110 60 a55 22 0 0 1 100 0" fill="none" stroke="#9aa9bd" stroke-width="3" stroke-dasharray="6 5"/><path d="M206 50 l6 12 l-13 1" fill="none" stroke="#9aa9bd" stroke-width="3"/><g stroke="#f87171" stroke-width="6" stroke-linecap="round"><line x1="140" y1="30" x2="180" y2="66"/><line x1="180" y1="30" x2="140" y2="66"/></g><text x="160" y="174" text-anchor="middle" font-size="11" fill="#9aa9bd">الهوائي واقف — لا مسح</text></svg></div><h3 style="font-size:clamp(1rem,1.8vw,1.3rem)">٤ · الهوائي لا يدور</h3><p><b style="color:var(--red)">السبب المحتمل:</b> الموتور، أو السير، أو الفيوز.</p><p><b style="color:var(--green)">أول شيء تفحصه:</b> الفيوز ← صوت الموتور ← السير.</p></div>
@@ -1103,6 +1104,24 @@
       <div class="card frag"><div class="ph" style="aspect-ratio:16/9"><svg viewBox="0 0 320 180" role="img"><rect width="320" height="180" fill="#06131f"/><rect x="186" y="40" width="118" height="80" rx="8" fill="#02080e" stroke="#46525f" stroke-width="2"/><text x="245" y="86" text-anchor="middle" font-size="12" fill="#46525f">شاشة مطفأة</text><rect x="20" y="70" width="70" height="40" rx="5" fill="#22354d" stroke="#f5a524"/><text x="55" y="95" text-anchor="middle" font-size="12" fill="#dbe7f1" direction="ltr">12/24 V</text><path d="M90 90 H120" stroke="#f87171" stroke-width="3"/><rect x="120" y="82" width="34" height="16" rx="4" fill="none" stroke="#ffcf6e" stroke-width="2"/><path d="M124 90 h9 m8 0 h9" stroke="#ffcf6e" stroke-width="2"/><text x="137" y="76" text-anchor="middle" font-size="10" fill="#ffcf6e">فيوز محترق</text><path d="M154 90 H186" stroke="#f87171" stroke-width="3" stroke-dasharray="4 5" opacity=".4"/><text x="160" y="166" text-anchor="middle" font-size="11" fill="#9aa9bd">لا كهرباء تصل للجهاز</text></svg></div><h3 style="font-size:clamp(1rem,1.8vw,1.3rem)">٦ · الجهاز لا يعمل إطلاقًا</h3><p><b style="color:var(--red)">السبب المحتمل:</b> الطاقة لا تصل.</p><p><b style="color:var(--green)">أول شيء تفحصه:</b> الفيوز ← الجهد 12/24 V ← القطبية.</p></div>
     </div>
     <div class="warn frag"><b>قاعدة الفني:</b> ابدأ بالأسهل والأرخص — <b>الإعدادات</b> ثم <b>الطاقة</b> ثم <b>الكيبلات</b> — والفك آخر شيء. أغلب البلاغات تنحل قبل ما تفتح الجهاز.</div>
+  </div>
+</section>
+
+<!-- ═══ شخّص العطل ═══ -->
+<section class="slide" data-title="شخّص العطل — تمرين" data-ch="7" data-notes="اعرض الصورة بلا كلام. اسأل القاعة: أ أم ب أم ج؟ ارفعوا الأيدي. ثم اضغط الجواب الأكثر. ست حالات — الأعطال الست نفسها. ركّز على «أول شيء تفحصه».">
+  <header><span class="k">١٥ <small>· ٣ من ٣</small></span><h2>شخّص العطل — ما أول شيء تفحصه؟</h2><span class="src">تمرين</span></header>
+  <div class="body two wide">
+    <div class="panel">
+      <div class="ptitle"><span>الحالة <span id="dxN">١</span> من ٦</span><small id="dxScore">النتيجة ٠ / ٠</small></div>
+      <div class="ph" id="dxPic" style="border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#06131f;aspect-ratio:16/9;max-height:34vh;margin:0 auto"></div>
+      <p class="lead" id="dxTitle" style="text-align:center;margin-top:.5rem;font-size:clamp(1rem,1.8vw,1.3rem)"></p>
+      <div class="ctrls" style="justify-content:center"><button class="btn ghost" id="dxPrev">‹ السابقة</button><button class="btn" id="dxNext">الحالة التالية ›</button></div>
+    </div>
+    <div>
+      <p class="lead frag" style="margin-bottom:.5rem">البلاغ وصلك كما بالصورة. <strong>ما السبب الأرجح؟</strong></p>
+      <div id="dxOpts" style="display:grid;gap:.5rem"></div>
+      <div id="dxAns" class="note" style="margin-top:.7rem;display:none"></div>
+    </div>
   </div>
 </section>
 
@@ -1202,7 +1221,7 @@ const DECK = (function () {
     if (pw && !pw.closed) { pw.focus(); broadcast(); return; }
     pw = window.open('', 'radar-presenter', 'width=900,height=600');
     if (!pw) { alert('المتصفح منع النافذة المنبثقة — اسمح بها ثم أعد المحاولة.'); return; }
-    pw.document.write(`<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>وضع المحاضر</title><style>
+    pw.document.write(`<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><title>وضع المحاضر</title><style>
       body{margin:0;background:#0b1220;color:#eef2f7;font-family:Vazirmatn,"Geeza Pro",Tahoma,sans-serif;display:grid;grid-template-rows:auto 1fr auto;height:100vh}
       header{display:flex;gap:1rem;align-items:center;padding:.8rem 1.2rem;border-bottom:1px solid rgba(255,255,255,.12);font-size:.95rem;color:#a5b3c6}
       #timer{font-family:Changa,sans-serif;font-size:1.6rem;color:#ffcf6e;direction:ltr;margin-inline-start:auto}
@@ -1368,6 +1387,45 @@ document.querySelectorAll('#blk5 .blk').forEach(g => g.addEventListener('click',
   lis.forEach(li => li.addEventListener('click', e => { e.stopPropagation(); const on = li.classList.contains('on'); lis.forEach(x => x.classList.remove('on')); if (on) { groups.forEach(g => { g.style.opacity = 1; g.style.filter = 'none'; }); return; } li.classList.add('on'); groups.forEach(g => { const on = g.dataset.k === li.dataset.k; g.style.opacity = on ? 1 : .15; g.style.filter = on ? 'drop-shadow(0 0 8px #ffcf6e)' : 'none'; }); }));
 })();
 
+
+/* ===== دوبلر متحرك ===== */
+(function () {
+  const btn = document.getElementById('dopBtn'); if (!btn) return;
+  const scene = document.getElementById('dopScene'), msg = document.getElementById('dopMsg'); let away = false;
+  btn.addEventListener('click', e => { e.stopPropagation(); away = !away;
+    scene.setAttribute('transform', away ? 'translate(640 0) scale(-1 1)' : '');
+    msg.textContent = away ? 'الهدف يبتعد عن الرادار — الموجات خلفه متباعدة ← الرادار يستقبل ترددًا أقل' : 'الهدف يقترب من الرادار — الموجات أمامه متقاربة ← الرادار يستقبل ترددًا أعلى';
+    msg.setAttribute('fill', away ? '#4ade80' : '#f87171');
+    btn.textContent = away ? '🔄 اجعله يقترب' : '🔄 اجعله يبتعد'; });
+})();
+
+/* ===== شخّص العطل ===== */
+(function () {
+  const pic = document.getElementById('dxPic'); if (!pic) return;
+  const D = [{"t": "الشاشة تعمل ولا توجد أهداف", "o": ["الماغنترون محروق", "الوضع Standby أو Gain منخفض", "كيبل البيانات مقطوع"], "a": 1, "act": "Transmit ← Gain ← مؤشر Tune", "note": "إعدادات شاشة — لا تفتح شيئًا", "svg": "<svg viewBox=\"0 0 320 180\" role=\"img\"><rect width=\"320\" height=\"180\" fill=\"#06131f\"/><circle cx=\"160\" cy=\"92\" r=\"78\" fill=\"#03140c\" stroke=\"#3f6a8a\"/><circle cx=\"160\" cy=\"92\" r=\"52\" fill=\"none\" stroke=\"#1f3a2a\"/><circle cx=\"160\" cy=\"92\" r=\"26\" fill=\"none\" stroke=\"#1f3a2a\"/><line x1=\"160\" y1=\"92\" x2=\"160\" y2=\"14\" stroke=\"#4ade80\" stroke-width=\"1.5\"/><path d=\"M160 92 L160 14 A78 78 0 0 1 228 55 Z\" fill=\"#4ade80\" opacity=\".18\"/><text x=\"160\" y=\"170\" text-anchor=\"middle\" font-size=\"11\" fill=\"#9aa9bd\">الشاشة شغّالة، المسح يدور — ولا هدف واحد</text></svg>"}, {"t": "الصورة تبهت تدريجيًا", "o": ["الماغنترون انتهى عمره", "الفيوز ضعيف", "خط الاتجاه غير معايَر"], "a": 0, "act": "ساعات التشغيل ومؤشر Tune — ثم التبديل", "note": "قطعة تُستهلك — عمرها بالساعات", "svg": "<svg viewBox=\"0 0 320 180\" role=\"img\"><rect width=\"320\" height=\"180\" fill=\"#06131f\"/><circle cx=\"160\" cy=\"92\" r=\"78\" fill=\"#03140c\" stroke=\"#3f6a8a\"/><circle cx=\"160\" cy=\"92\" r=\"52\" fill=\"none\" stroke=\"#1f3a2a\"/><circle cx=\"160\" cy=\"92\" r=\"26\" fill=\"none\" stroke=\"#1f3a2a\"/><line x1=\"160\" y1=\"92\" x2=\"160\" y2=\"14\" stroke=\"#4ade80\" stroke-width=\"1.5\"/><g fill=\"#4ade80\" opacity=\".22\"><path d=\"M90 40 q40 20 20 60 q-10 30 30 50 L82 150 Z\"/><circle cx=\"210\" cy=\"70\" r=\"4\"/><circle cx=\"196\" cy=\"120\" r=\"3\"/></g><text x=\"160\" y=\"170\" text-anchor=\"middle\" font-size=\"11\" fill=\"#9aa9bd\">الأهداف تضعف يومًا بعد يوم — حتى بأعلى Gain</text></svg>"}, {"t": "الأهداف في اتجاه خاطئ", "o": ["موتور الدوران", "خط الاتجاه (Heading Line) غير معايَر بعد التركيب", "Gain مرتفع"], "a": 1, "act": "معايرة Heading Line على هدف معروف", "note": "يظهر بعد أي تركيب أو فك للهوائي", "svg": "<svg viewBox=\"0 0 320 180\" role=\"img\"><rect width=\"320\" height=\"180\" fill=\"#06131f\"/><circle cx=\"160\" cy=\"92\" r=\"78\" fill=\"#03140c\" stroke=\"#3f6a8a\"/><circle cx=\"160\" cy=\"92\" r=\"52\" fill=\"none\" stroke=\"#1f3a2a\"/><circle cx=\"160\" cy=\"92\" r=\"26\" fill=\"none\" stroke=\"#1f3a2a\"/><line x1=\"160\" y1=\"92\" x2=\"160\" y2=\"14\" stroke=\"#4ade80\" stroke-width=\"1.5\"/><path d=\"M186 30 q30 30 30 62 q0 30 -30 60 L238 152 L238 30 Z\" fill=\"#4ade80\" opacity=\".6\"/><text x=\"160\" y=\"170\" text-anchor=\"middle\" font-size=\"11\" fill=\"#9aa9bd\">الساحل يظهر على يمين الشاشة — وهو أمامك بالواقع</text></svg>"}, {"t": "الهوائي لا يدور", "o": ["الموتور أو السير أو الفيوز", "الماغنترون", "الإعدادات"], "a": 0, "act": "الفيوز ← صوت الموتور ← السير", "note": "ميكانيكي/كهربائي — اسمع قبل ما تفك", "svg": "<svg viewBox=\"0 0 320 180\" role=\"img\"><rect width=\"320\" height=\"180\" fill=\"#06131f\"/><rect x=\"156\" y=\"95\" width=\"8\" height=\"60\" fill=\"#6b86a3\"/><rect x=\"90\" y=\"80\" width=\"140\" height=\"16\" rx=\"8\" fill=\"#dbe7f1\"/><path d=\"M110 60 a55 22 0 0 1 100 0\" fill=\"none\" stroke=\"#9aa9bd\" stroke-width=\"3\" stroke-dasharray=\"6 5\"/><g stroke=\"#f87171\" stroke-width=\"6\" stroke-linecap=\"round\"><line x1=\"140\" y1=\"30\" x2=\"180\" y2=\"66\"/><line x1=\"180\" y1=\"30\" x2=\"140\" y2=\"66\"/></g><text x=\"160\" y=\"174\" text-anchor=\"middle\" font-size=\"11\" fill=\"#9aa9bd\">الشاشة شغّالة — لكن الهوائي واقف ما يدور</text></svg>"}, {"t": "رسالة «No Scanner»", "o": ["كيبل البيانات أو الموصل", "الماغنترون", "Gain منخفض"], "a": 0, "act": "الموصلان عند الهوائي وعند الشاشة (رطوبة، صدأ)", "note": "الشاشة والهوائي «ما يتكلمون»", "svg": "<svg viewBox=\"0 0 320 180\" role=\"img\"><rect width=\"320\" height=\"180\" fill=\"#06131f\"/><rect x=\"100\" y=\"40\" width=\"120\" height=\"86\" rx=\"8\" fill=\"#04101a\" stroke=\"#dbe7f1\" stroke-width=\"2\"/><text x=\"160\" y=\"78\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\" fill=\"#f87171\" direction=\"ltr\">NO</text><text x=\"160\" y=\"100\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\" fill=\"#f87171\" direction=\"ltr\">SCANNER</text><text x=\"160\" y=\"170\" text-anchor=\"middle\" font-size=\"11\" fill=\"#9aa9bd\">رسالة على الشاشة بعد التشغيل</text></svg>"}, {"t": "الجهاز لا يعمل إطلاقًا", "o": ["الطاقة لا تصل", "الهوائي", "خط الاتجاه"], "a": 0, "act": "الفيوز ← الجهد 12/24 V ← القطبية", "note": "الأرخص أولًا — قبل أي شي", "svg": "<svg viewBox=\"0 0 320 180\" role=\"img\"><rect width=\"320\" height=\"180\" fill=\"#06131f\"/><rect x=\"100\" y=\"40\" width=\"120\" height=\"86\" rx=\"8\" fill=\"#02080e\" stroke=\"#46525f\" stroke-width=\"2\"/><circle cx=\"212\" cy=\"118\" r=\"4\" fill=\"#3a3a3a\"/><text x=\"160\" y=\"88\" text-anchor=\"middle\" font-size=\"12\" fill=\"#46525f\">لا شيء</text><text x=\"160\" y=\"170\" text-anchor=\"middle\" font-size=\"11\" fill=\"#9aa9bd\">ضغطت التشغيل — الشاشة سوداء والمؤشر مطفأ</text></svg>"}];
+  const L = ['أ', 'ب', 'ج']; let i = 0, done = {}, right = 0, tried = 0;
+  const opts = document.getElementById('dxOpts'), ans = document.getElementById('dxAns');
+  function render() {
+    const c = D[i]; pic.innerHTML = c.svg; document.getElementById('dxN').textContent = ['١','٢','٣','٤','٥','٦'][i];
+    document.getElementById('dxTitle').textContent = c.t; document.getElementById('dxScore').textContent = 'النتيجة ' + right + ' / ' + tried;
+    opts.innerHTML = c.o.map((o, k) => `<button class="btn ghost dxo" data-k="${k}" style="justify-content:flex-start;text-align:right;font-size:clamp(.95rem,1.6vw,1.15rem);padding:.6rem .9rem"><b style="color:var(--amber-2);margin-inline-end:.5rem">${L[k]}</b>${o}</button>`).join('');
+    ans.style.display = 'none';
+    if (done[i] !== undefined) reveal(done[i], false);
+  }
+  function reveal(k, count) {
+    const c = D[i]; if (count) { done[i] = k; tried++; if (k === c.a) right++; document.getElementById('dxScore').textContent = 'النتيجة ' + right + ' / ' + tried; }
+    opts.querySelectorAll('.dxo').forEach(b => { const kk = +b.dataset.k; b.disabled = true; b.style.opacity = kk === c.a || kk === k ? 1 : .35;
+      if (kk === c.a) { b.style.borderColor = '#4ade80'; b.style.background = 'rgba(74,222,128,.12)'; }
+      else if (kk === k) { b.style.borderColor = '#f87171'; b.style.background = 'rgba(248,113,113,.12)'; } });
+    ans.style.display = 'block';
+    ans.innerHTML = (k === c.a ? '<b style="color:#4ade80">✓ صحيح.</b> ' : '<b style="color:#f87171">✕ ليس هذا.</b> السبب الأرجح: <b>' + c.o[c.a] + '</b>. ') + '<br><b>أول شيء تفحصه:</b> ' + c.act + '<br><span style="color:var(--dim)">' + c.note + '</span>';
+  }
+  opts.addEventListener('click', e => { const b = e.target.closest('.dxo'); if (!b || done[i] !== undefined) return; e.stopPropagation(); reveal(+b.dataset.k, true); });
+  document.getElementById('dxNext').addEventListener('click', e => { e.stopPropagation(); i = (i + 1) % D.length; render(); });
+  document.getElementById('dxPrev').addEventListener('click', e => { e.stopPropagation(); i = (i + D.length - 1) % D.length; render(); });
+  render(); if(location.search.includes('dx=1')){ opts.querySelector('.dxo[data-k="0"]').click(); }
+})();
+
 /* ===== التركيب التفاعلي ===== */
 (function () {
   const lis = document.querySelectorAll('#instList li'); if (!lis.length) return;
@@ -1407,6 +1465,7 @@ document.querySelectorAll('.sc-t').forEach(b => b.addEventListener('click', e =>
   }
   gain.addEventListener('input', render); sea.addEventListener('input', render); render();
 })();
+if(location.search.includes('check')) setTimeout(function(){ const out=[]; document.querySelectorAll('.slide').forEach((s,k)=>{ s.classList.add('active'); s.querySelectorAll('.frag').forEach(f=>f.classList.add('show')); const b=s.querySelector('.body')||s.querySelector('.hero'); const o=b?b.scrollHeight-b.clientHeight:0; if(o>4) out.push((k+1)+':'+o); s.classList.remove('active'); }); const p=document.createElement('pre'); p.id='ovr'; p.textContent='OVR['+out.join(',')+']'; document.body.appendChild(p); }, 1500);
 </script>
 </body>
 </html>
