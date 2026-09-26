@@ -1221,7 +1221,7 @@ const DECK = (function () {
     if (pw && !pw.closed) { pw.focus(); broadcast(); return; }
     pw = window.open('', 'radar-presenter', 'width=900,height=600');
     if (!pw) { alert('المتصفح منع النافذة المنبثقة — اسمح بها ثم أعد المحاولة.'); return; }
-    pw.document.write(`<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><title>وضع المحاضر</title><style>
+    pw.document.write(`<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>وضع المحاضر</title><style>
       body{margin:0;background:#0b1220;color:#eef2f7;font-family:Vazirmatn,"Geeza Pro",Tahoma,sans-serif;display:grid;grid-template-rows:auto 1fr auto;height:100vh}
       header{display:flex;gap:1rem;align-items:center;padding:.8rem 1.2rem;border-bottom:1px solid rgba(255,255,255,.12);font-size:.95rem;color:#a5b3c6}
       #timer{font-family:Changa,sans-serif;font-size:1.6rem;color:#ffcf6e;direction:ltr;margin-inline-start:auto}
